@@ -1,96 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Presentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Presentation</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
 
-    body {
-        background: #111;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-    }
+        a {
+            display: block;
+            width: 250px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
 
-    .video-wrapper {
-        width: min(95vw, 1400px);
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-        display: block;
-        background: black;
-        border-radius: 8px;
-    }
-
-    .controls {
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    button {
-        padding: 12px 24px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 6px;
-        background: #2563eb;
-        color: white;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #1d4ed8;
-    }
-</style>
+        a:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
 <body>
 
-<div class="video-wrapper">
-    <video id="video" controls>
-        <source src="bee.mp4" type="video/mp4">
-        Your browser does not support HTML5 video playback.
-    </video>
+    <h1>Presentation Resources</h1>
 
-    <div class="controls">
-        <button onclick="openFullscreen()">Fullscreen</button>
-    </div>
-</div>
+    <a href="video.html">View Video</a>
 
-<script>
-function openFullscreen() {
-    const video = document.getElementById("video");
-
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-    }
-}
-
-document.addEventListener("keydown", function(event) {
-    const video = document.getElementById("video");
-
-    if (event.code === "Space") {
-        event.preventDefault();
-
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
-        }
-    }
-});
-</script>
+    <a href="images.html">View Images</a>
 
 </body>
 </html>
