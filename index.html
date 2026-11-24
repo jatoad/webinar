@@ -1,43 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Presentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pleistocene Exhibit Redesign</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            text-align: center;
-            padding-top: 100px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        a {
-            display: block;
-            width: 250px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-        }
+body{
+    font-family: Arial, sans-serif;
+    background:#353840;
+    color:#F7F7F5;
+}
 
-        a:hover {
-            background: #1d4ed8;
-        }
-    </style>
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    color:#F47B20;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.cards{
+    max-width:1000px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:20px;
+}
+
+.card{
+    background:#40444f;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    border:2px solid #F47B20;
+}
+
+.card h2{
+    color:#F47B20;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin-bottom:20px;
+}
+
+.button{
+    display:inline-block;
+    background:#F47B20;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.button:hover{
+    opacity:0.9;
+}
+</style>
 </head>
 <body>
 
-    <h1>Presentation Resources</h1>
+<section class="hero">
+    <h1>Pleistocene Exhibit Redesign</h1>
+    <p>
+        Supporting resources for the Bristol Museum & Art Gallery
+        Pleistocene exhibit redesign project.
+    </p>
+</section>
 
-    <a href="video.html">View Video</a>
+<section class="cards">
 
-    <a href="images.html">View Images</a>
+    <div class="card">
+        <h2>Webinar</h2>
+        <p>Watch the recorded webinar presentation.</p>
+        <a class="button" href="webinar/">Launch Webinar</a>
+    </div>
+
+    <div class="card">
+        <h2>Plaques</h2>
+        <p>View the redesigned educational plaques.</p>
+        <a class="button" href="plaques/">View Plaques</a>
+    </div>
+
+</section>
 
 </body>
 </html>

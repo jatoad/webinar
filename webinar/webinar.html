@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Presentation</title>
+
+## wrewrwrwerwer
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    .video-wrapper {
+        width: min(95vw, 1400px);
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+        background: black;
+        border-radius: 8px;
+    }
+
+    .controls {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #1d4ed8;
+    }
+</style>
+</head>
+<body>
+
+<div class="video-wrapper">
+    <video id="video" controls>
+        <source src="bee.mp4" type="video/mp4">
+        Your browser does not support HTML5 video playback.
+    </video>
+
+    <div class="controls">
+        <button onclick="openFullscreen()">Fullscreen</button>
+    </div>
+</div>
+
+<script>
+function openFullscreen() {
+    const video = document.getElementById("video");
+
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+    }
+}
+
+document.addEventListener("keydown", function(event) {
+    const video = document.getElementById("video");
+
+    if (event.code === "Space") {
+        event.preventDefault();
+
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+});
+</script>
+
+</body>
+</html>
