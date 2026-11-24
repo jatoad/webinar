@@ -12,16 +12,22 @@
         box-sizing: border-box;
     }
 
-    header {
+       header {
         text-align: center;
-        padding: 12px 24px;
+        padding: 3rem 1rem 2rem;
     }
 
     h1 {
         color: #F47B20;
-        size: 4rem;
+        font-size: clamp(2.5rem, 6vw, 4rem);
         margin-bottom: 0.5rem;
-        font-weight: bold;
+    }
+
+    .subtitle {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #F7F7F5;
+        opacity: 0.9;
     }
 
     body {
@@ -54,8 +60,12 @@
 </head>
 <body class="container">
 
-<header> 
-    <h1>Concept webinar</h1> 
+<header>
+    <h1>Pleistocene Educational Webinar</h1>
+    <p class="subtitle">
+        Proposed educational webinar designs for the Bristol Museum & Art Gallery
+        Pleistocene exhibit redesign.
+    </p>
 </header>
 
 <div class="video-wrapper">
